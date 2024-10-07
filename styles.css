@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    text-align: center;
+    height: 100%;
+    background: linear-gradient(135deg, #c237b2, #04043b, #bb2c6f, #2900fe);
+    background-size: 200% 200%; /* Ajustado para criar uma transição mais suave */
+    animation: gradient 10s ease infinite;
+}
+
+html {
+    height: 100%;
+}
+
+.wallpaper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa a tela inteira */
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+/* Estilo para o modal */
+.modal {
+    display: none; /* Esconde o modal inicialmente */
+    position: fixed; /* Fixa na tela */
+    z-index: 1; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100%; /* Ocupa toda a altura da tela */
+    overflow: auto; /* Adiciona a capacidade de rolagem */
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro transparente */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Largura da imagem no modal */
+    max-width: 700px; /* Largura máxima */
+}
+
+.modal-content:hover {
+    cursor: zoom-out; /* Troca o cursor quando passa sobre a imagem */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.curriculum {
+    padding: 20px;
+    margin-top: 0;
+    position: relative; /* Para manter a posição relativa ao fundo */
+    display: flex;
+    z-index: 0; /* Garante que esteja atrás do conteúdo principal */
+    justify-content: center;
+}
+
+.curriculum-box {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente suave */
+    padding: 30px;
+    border-radius: 15px; /* Deixa os cantos arredondados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Aplica a sombra */
+    display: inline-block;
+    max-width: 400px; /* Limitar a largura da box */
+    width: 100%; /* Faz a caixa ocupar toda a largura possível até 400px */
+}
+
+.curriculum img {
+    max-width: 100%; /* Ajusta a largura da imagem à caixa */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.curriculum img:hover {
+    cursor: pointer; /* Troca o cursor para pointer ao passar o mouse */
+}
+
+
+.curriculum::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Herda o fundo do body */
+    z-index: -1; /* Coloca a camada de fundo atrás do conteúdo */
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilos para a seção de experiência */
+.experience {
+    background-color: linear-gradient(135deg, #bf3eb0, #04043b, #e74994, #2900fe); /* Fundo escuro suave */
+    padding: 40px 20px;
+    margin: 30px auto;
+    max-width: 800px; /* Limita a largura da seção para melhor legibilidade */
+    border-radius: 15px; /* Deixa a seção com cantos arredondados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra suave */
+    color: #fff;
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Roboto Mono', monospace; /* Destaca o título com uma fonte futurista */
+}
+
+.experience p {
+    font-size: 1.1rem;
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para facilitar a leitura */
+    text-align: justify; /* Alinha o texto para que fique bem distribuído */
+    font-family: 'Roboto Mono', monospace;
+    color: #e0e0e0; /* Um tom de branco suave */
+}
+
+/* Estilo para a box do relógio */
+.clock-box {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente suave */
+    padding: 20px;
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    display: inline-block;
+    max-width: 250px; /* Largura máxima da box */
+    width: 100%; /* Ajusta a largura para preencher o conteúdo */
+    text-align: center;
+    margin: 20px auto; /* Espaçamento ao redor da box */
+    color: #fff; /* Cor do texto */
+    font-family: 'Orbitron', sans-serif; /* Fonte do relógio */
+    font-size: 2rem;
+}
